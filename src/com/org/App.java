@@ -11,7 +11,7 @@ import com.org.task4.Cryptograph4;
  */
 public class App {
 
-    public static void main(String []args){
+    public static void main(String[] args) {
         Cryptograph1 cryptograph1 = new Cryptograph1();
         Cryptograph2 cryptograph2 = new Cryptograph2();
         Cryptograph3 cryptograph3 = new Cryptograph3();
@@ -26,7 +26,13 @@ public class App {
         //System.out.println(cryptograph2.decode("OTYPCRYHAPGR", 6,5,3,4,1,2));
 
         //Działa dla opcji bez spacji
-//        System.out.println(cryptograph3.code("HEREISASECRETMESSAGEENCIPHEREDBYTRANSPOSITION", "CONVENIENCE"));
+        //System.out.println(cryptograph3.code("HEREISASECRETMESSAGEENCIPHEREDBYTRANSPOSITION", "CONVENIENCE"));
+
+        try {
+            System.out.println(cryptograph4.code(3, 1, "CRYPTOGRAPHY"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

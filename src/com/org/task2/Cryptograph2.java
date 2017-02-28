@@ -48,29 +48,29 @@ public class Cryptograph2 {
         String wordTemp = word;
         LinkedList<Sign2> listOfSigns = new LinkedList<>();
         while (word.length() > endWord.length()) {
-            for (int i: decoder){
-                try{
+            for (int i : decoder) {
+                try {
                     Sign2 sign2 = new Sign2(wordTemp.charAt(0), i);
                     listOfSigns.add(sign2);
                     wordTemp = wordTemp.substring(1);
-                }catch (Exception e)
-                {  break;
+                } catch (Exception e) {
+                    break;
                 }
 
             }
             Collections.sort(listOfSigns, new Comparator<Sign2>() {
                 @Override
                 public int compare(Sign2 o1, Sign2 o2) {
-                    if (o1.getOrder() < o2.getOrder()){
+                    if (o1.getOrder() < o2.getOrder()) {
                         return -1;
                     }
-                    if (o1.getOrder() > o2.getOrder()){
+                    if (o1.getOrder() > o2.getOrder()) {
                         return 1;
                     }
                     return 0;
                 }
             });
-            for(Sign2 sign: listOfSigns){
+            for (Sign2 sign : listOfSigns) {
                 endWord = endWord + sign.getCharacter();
             }
             listOfSigns = new LinkedList<Sign2>();
@@ -82,17 +82,17 @@ public class Cryptograph2 {
 
     private String deleteAllTempSymbols(String endSubWord) {
 
-        String endWord="";
-        for (String subword: endSubWord.split("@")){
-            endWord=endWord+subword;
+        String endWord = "";
+        for (String subword : endSubWord.split("@")) {
+            endWord = endWord + subword;
         }
         return endWord;
     }
 
     private String prepareForDecoding(String wordTemp, int[] decoder) {
-        for (int i =0 ; i <decoder.length; i++){
-            if (decoder[i]>wordTemp.length()){
-                String part1 = wordTemp.substring(0,i);
+        for (int i = 0; i < decoder.length; i++) {
+            if (decoder[i] > wordTemp.length()) {
+                String part1 = wordTemp.substring(0, i);
                 String part2 = wordTemp.substring(i, wordTemp.length());
                 wordTemp = part1 + "@" + part2;
             }
