@@ -69,7 +69,7 @@ public class Cryptograph3 {
 
 
         for (Sign3 sign : coderList) {
-            endWord = endWord + " " + listOfSubstrings.get(sign.getPosittion());
+            endWord = endWord  + " " + listOfSubstrings.get(sign.getPosittion());
         }
 
         return endWord;
