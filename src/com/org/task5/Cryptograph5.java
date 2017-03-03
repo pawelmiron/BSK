@@ -52,32 +52,16 @@ public class Cryptograph5 {
 
 
         for (int i = 0; i<key.length(); i++){
-            Character character = key.charAt(i);
-            for (int j = 0; j<word.length(); j++){
-                if (word.charAt(j)==character){
-                    endWord = endWord + (char)(j+65);
+            Character characterKey = key.charAt(i);
+            Character characterWord = word.charAt(i);
+            int j = ((int) characterKey)-65;
+            for (int k=0; k<26; k++){
+                if (vigenereTable[j][k].equals(characterWord)){
+                    endWord = endWord + vigenereTable[0][k];
                 }
             }
         }
         return endWord;
     }
 
-    public String decode2 (String word, String key){
-        String endWord="";
-        Character tab[] = new Character[26];
-        for(int i =0; i<26 ; i++)
-        {
-            tab[i] = (char)(i+65);
-        }
-        for(int j=0 ; j<key.length();j++) {
-            int znak = (int)word.charAt(j)-((int) key.charAt(j));
-            znak = Math.abs(znak);
-            znak = znak%26+65;
-            endWord = endWord + tab[znak];
-        }
-
-
-
-        return endWord;
-    }
 }

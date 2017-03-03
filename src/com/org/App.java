@@ -36,8 +36,8 @@ public class App {
         System.out.println(cezar.decode(5,7, "ROXEYZLOHEQX"));
 
         System.out.println("");
-        System.out.println(vigener.code("CRYPTOGRAPHY", "BREAKBREAKBR"));
-        System.out.println(vigener.decode2("DICPDPXVAZIP", "BREAKBREAKBR"));
+        System.out.println(vigener.code("CRYPTOGRAPHYABCDEFG", "BREAKBREAKBRQWERTYU"));
+        System.out.println(vigener.decode("DICPDPXVAZIPQXGUXDA", "BREAKBREAKBRQWERTYU"));
 
 
 
