@@ -21,23 +21,24 @@ public class App {
         Cryptograph4 cezar = new Cryptograph4();
         Cryptograph5 vigener = new Cryptograph5();
 
-        System.out.println(railFence.code("CRYPTOGRAPHY", 3));
-        System.out.println(railFence.decode("CTARPORPYYGH", 3));
-        System.out.println("");
+//        System.out.println(railFence.code("CRYPTOGRAPHY", 3));
+//        System.out.println(railFence.decode("CTARPORPYYGH", 3));
+//        System.out.println("");
 
         System.out.println(macierz.code("CRYPTOGRAPHYOSA", 3, 1, 4, 2));
         System.out.println(macierz.decode("YCPRGTROHAYPAOS", 3,1,4,2)); //Blad w koncowce
         System.out.println("");
-
-        System.out.println(macierzKlucz.code("HEREISASECRETMESSAGEENCIPHEREDBYTRANSPOSITION", "CONVENIENCE"));
-        System.out.println("");
-
-        System.out.println(cezar.code(5,7,"CRYPTOGRAPHY"));
-        System.out.println(cezar.decode(5,7, "ROXEYZLOHEQX"));
-
-        System.out.println("");
+//
+//        System.out.println(macierzKlucz.code("HEREISASECRETMESSAGEENCIPHEREDBYTRANSPOSITION", "CONVENIENCE"));
+//        System.out.println("");
+//
+//        System.out.println(cezar.code(5,7,"CRYPTOGRAPHY"));
+//        System.out.println(cezar.decode(5,7, "ROXEYZLOHEQX"));
+//
+//        System.out.println("");
         System.out.println(vigener.code("CRYPTOGRAPHYABCDEFG", "BREAKBREAKBRQWERTYU"));
         System.out.println(vigener.decode("DICPDPXVAZIPQXGUXDA", "BREAKBREAKBRQWERTYU"));
+        System.out.println(vigener.decode2("DICPDPXVAZIPQXGUXDA", "BREAKBREAKBRQWERTYU"));
 
 
 

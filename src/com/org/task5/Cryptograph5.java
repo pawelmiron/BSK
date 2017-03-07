@@ -64,4 +64,26 @@ public class Cryptograph5 {
         return endWord;
     }
 
+    public String decode2 (String word, String key){
+        String endWord="";
+        Character tab[] = new Character[26];
+        for(int i =0; i<26 ; i++)
+        {
+            tab[i] = (char)(i+65);
+        }
+        for(int j=0 ; j<key.length();j++) {
+            int znak = (int)word.charAt(j)-((int) key.charAt(j));
+            if(znak<0)
+            {
+                znak +=26;
+            }
+            znak = znak%26;
+            endWord = endWord + tab[znak];
+        }
+
+
+
+        return endWord;
+    }
+
 }
