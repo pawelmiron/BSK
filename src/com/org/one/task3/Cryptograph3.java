@@ -1,7 +1,4 @@
-package com.org.task3;
-
-import com.org.task2.Sign2;
-import sun.awt.image.ImageWatched;
+package com.org.one.task3;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -69,7 +66,7 @@ public class Cryptograph3 {
 
 
         for (Sign3 sign : coderList) {
-            endWord = endWord  + " " + listOfSubstrings.get(sign.getPosittion());
+            endWord = endWord  + listOfSubstrings.get(sign.getPosittion());
         }
 
         return endWord;

@@ -1,4 +1,4 @@
-package com.org.task2;
+package com.org.one.task2;
 
 /**
  * Created by mironp on 26.02.2017.

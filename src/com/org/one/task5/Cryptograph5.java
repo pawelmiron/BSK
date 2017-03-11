@@ -1,4 +1,4 @@
-package com.org.task5;
+package com.org.one.task5;
 
 import java.util.ArrayList;
 
